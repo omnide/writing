@@ -1,0 +1,16 @@
+{
+    "name": "structurizr",
+    "id": "structurizr",
+    "version": "0.0.1",
+    "description": "Install Structurizr CLI from github releases.",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Which version of Structurizr CLI to install"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/java"
+    ]
+}

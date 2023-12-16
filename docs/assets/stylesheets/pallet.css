@@ -1,0 +1,7 @@
+:root,
+[data-md-color-scheme=default] {
+
+}
+[data-md-color-scheme=slate] {
+    --md-hue: 232;
+}

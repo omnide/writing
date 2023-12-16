@@ -1,0 +1,149 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "buster"
+        }
+    },
+    "containerEnv": {
+        "EDITOR": "code --wait"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.codeActionsOnSave": {
+                    "source.fixAll.markdownlint": true
+                },
+                "editor.rulers": [
+                    80,
+                    100,
+                    120
+                ],
+                "editor.tabSize": 4,
+                "editor.wordWrapColumn": 100,
+                "editor.wrappingColumn": 100,
+                "python.languageServer": "Default",
+                "python.linting.enabled": true,
+                "python.formatting.provider": "black",
+                "[markdown]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode",
+                    "editor.unicodeHighlight.ambiguousCharacters": true,
+                    "editor.unicodeHighlight.invisibleCharacters": true,
+                    "diffEditor.ignoreTrimWhitespace": false,
+                    "editor.wordWrap": "on",
+                    "editor.quickSuggestions": {
+                        "comments": "off",
+                        "strings": "off",
+                        "other": "off"
+                    },
+                    "editor.formatOnSave": true,
+                    "editor.formatOnPaste": true
+                },
+                "markdownlint.config": {
+                    "default": true,
+                    "MD007": {
+                        "indent": 4
+                    },
+                    "MD0013": {
+                        "line_length": 100,
+                        "tables": false
+                    },
+                    "MD025": {
+                        "front_matter_title": "ignored"
+                    },
+                    "MD046": false
+                },
+                "prettier.proseWrap": "always",
+                "prettier.printWidth": 100,
+                "taskExplorer.pathToPrograms": {
+                    "make": "make"
+                },
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "/bin/bash",
+                        "icon": "terminal-bash"
+                    },
+                    "zsh": {
+                        "path": "/usr/bin/zsh"
+                    }
+                },
+                "yaml.schemas": {
+                    "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+                }
+            },
+            "extensions": [
+                "bierner.markdown-mermaid",
+                "chrischinchilla.vale-vscode",
+                "christian-kohler.path-intellisense",
+                "ciarant.vscode-structurizr",
+                "DavidAnson.vscode-markdownlint",
+                "eamodio.gitlens",
+                "esbenp.prettier-vscode",
+                "github.copilot",
+                "github.copilot-chat",
+                "ms-azuretools.vscode-docker",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-vscode.makefile-tools",
+                "ms-vscode.wordcount",
+                "oderwat.indent-rainbow",
+                "pharndt.vscode-markdown-table",
+                "redhat.vscode-yaml",
+                "spmeesseman.vscode-taskexplorer",
+                "stkb.rewrap",
+                "streetsidesoftware.code-spell-checker",
+                "tamasfe.even-better-toml"
+            ]
+        }
+    },
+    "portsAttributes": {
+        "8000": {
+            "label": "mkdocs serve",
+            "onAutoForward": "notify"
+        }
+    },
+    "postCreateCommand": "/tmp/install/post-create.sh",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "installOhMyZsh": true,
+            "configureZshAsDefaultShell": true,
+            "upgradePackages": true,
+            "username": "vscode",
+            "userUid": 1000,
+            "userGid": 1000
+        },
+        "ghcr.io/devcontainers/features/nix:1": {
+            "multiUser": false,
+            "packages": [
+                "bat",
+                "delta",
+                "direnv",
+                "eza",
+                "fd",
+                "fzf",
+                "gh",
+                // "jdk17",
+                "jq",
+                "lsd",
+                "ripgrep",
+                "starship",
+                "thefuck",
+                "yq"
+            ],
+            "extraNixConfig": [
+                "experimental-features = nix-command flakes",
+                "trusted-users = root vscode"
+            ]
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "20"
+        },
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "17"
+        },
+        "ghcr.io/shinepukur/devcontainer-features/vale:1": {},
+        "./features/src/structurizr": {},
+        "./features/src/final-layers": {}
+    }
+}

@@ -1,0 +1,68 @@
+site_name: Writing Kit
+repo_url: https://github.com/omnidevelop/writing
+repo_name: omnidevelop/writing
+edit_uri: blob/main/docs/
+extra_css:
+  - assets/stylesheets/glightbox.min.css
+  - assets/stylesheets/pallet.css
+  - assets/stylesheets/neoteroi-mkdocs.css
+extra_javascript:
+  - assets/javascripts/glightbox.min.js
+theme:
+  name: material
+  favicon: assets/images/favicon.ico
+  features:
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.sections
+    - search.suggest
+  icon:
+    repo: fontawesome/brands/github
+  logo: assets/images/logo.png
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: brown
+      accent: 'deep purple'
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: brown
+      accent: 'deep purple'
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+plugins: 
+  - search
+  - glightbox
+  - awesome-pages
+markdown_extensions: 
+  - attr_list
+  - admonition
+  - md_in_html
+  - mdx_truly_sane_lists
+  - neoteroi.timeline
+  - pymdownx.arithmatex
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - override/.icons
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      preserve_tabs: true
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tilde
+  - tables
+
