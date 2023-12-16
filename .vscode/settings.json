@@ -1,0 +1,14 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "cSpell.includeRegExpList": [
+        ".*.md"
+    ],
+    "cSpell.words": [
+        "devcontainer",
+        "Excalidraw",
+        "mkdocs",
+        "pomdtr",
+        "squidfunk's",
+        "Structurizr"
+    ]
+}

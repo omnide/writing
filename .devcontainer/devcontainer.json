@@ -53,6 +53,12 @@
                     },
                     "MD046": false
                 },
+                "plantuml.render": "Local",
+                "plantuml.java": "/usr/local/sdkman/candidates/java/current/bin/java",
+                "plantuml.commandArgs": [
+                    "-Djava.awt.headless=true",
+                    "-Djava.security.egd=file:/dev/./urandom"
+                ],
                 "prettier.proseWrap": "always",
                 "prettier.printWidth": 100,
                 "taskExplorer.pathToPrograms": {
@@ -73,6 +79,7 @@
             },
             "extensions": [
                 "bierner.markdown-mermaid",
+                "brody715.vscode-cuelang",
                 "chrischinchilla.vale-vscode",
                 "christian-kohler.path-intellisense",
                 "ciarant.vscode-structurizr",
@@ -81,6 +88,7 @@
                 "esbenp.prettier-vscode",
                 "github.copilot",
                 "github.copilot-chat",
+                "jebbs.plantuml",
                 "ms-azuretools.vscode-docker",
                 "ms-python.python",
                 "ms-python.vscode-pylance",
@@ -92,7 +100,8 @@
                 "spmeesseman.vscode-taskexplorer",
                 "stkb.rewrap",
                 "streetsidesoftware.code-spell-checker",
-                "tamasfe.even-better-toml"
+                "tamasfe.even-better-toml",
+                "vscjava.vscode-gradle"
             ]
         }
     },
@@ -116,16 +125,19 @@
         "ghcr.io/devcontainers/features/nix:1": {
             "multiUser": false,
             "packages": [
+                "atuin",
                 "bat",
+                "cue",
                 "delta",
                 "direnv",
                 "eza",
                 "fd",
                 "fzf",
                 "gh",
-                // "jdk17",
+                "graphviz",
                 "jq",
                 "lsd",
+                "plantuml-c4-unstable",
                 "ripgrep",
                 "starship",
                 "thefuck",
@@ -140,7 +152,10 @@
             "version": "20"
         },
         "ghcr.io/devcontainers/features/java:1": {
-            "version": "17"
+            "version": "17",
+            "installGradle": true,
+            "installMaven": true,
+            "installAnt": true
         },
         "ghcr.io/shinepukur/devcontainer-features/vale:1": {},
         "./features/src/structurizr": {},

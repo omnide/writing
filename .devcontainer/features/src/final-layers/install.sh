@@ -2,8 +2,12 @@
 set -eEo pipefail
 
 # Enable completions and integrations for various tools
+echo 'eval "$(atuin init zsh)"' >> ${HOME}/.zshrc
 echo 'eval "$(starship init zsh)"' >> ${HOME}/.zshrc
 echo 'eval "$(thefuck --alias)"' >> ${HOME}/.zshrc
+
+# Use plantuml in headless mode via alias
+echo "alias puml='JAVA_TOOL_OPTIONS=\"-Djava.awt.headless=true\" plantuml'" >> ${HOME}/.zshrc
 
 # Install markdownlint-cli
 npm install -g markdownlint-cli

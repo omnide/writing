@@ -74,7 +74,8 @@ check_packages() {
 export DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies if missing
-check_packages curl ca-certificates gnupg2 dirmngr coreutils unzip dnsutils
+# Note that libxtst6 is required to run the structurizr-cli export to puml
+check_packages curl ca-certificates gnupg2 dirmngr coreutils unzip dnsutils libxtst6
 if ! type git > /dev/null 2>&1; then
     check_packages git
 fi
@@ -89,10 +90,11 @@ echo "(*) Downloading Terraform docs... ${zip_file}"
 curl -sSL -o /tmp/downloads/${zip_file} https://github.com/structurizr/cli/releases/download/v${STRUCTURIZR_VERSION}/${zip_file}
 mkdir -p /tmp/downloads/structurizr-cli
 unzip "${zip_file}" -d /tmp/downloads/structurizr-cli
-mv /tmp/downloads/structurizr-cli/structurizr-cli /usr/local/bin/structurizr-cli
-ln -s /usr/local/bin/structurizr-cli /usr/local/bin/structurizr
+ls -la /tmp/downloads/structurizr-cli
+mv /tmp/downloads/structurizr-cli /usr/local/bin/structurizr-cli
+ln -s /usr/local/bin/structurizr-cli/structurizr.sh /usr/local/bin/structurizr
 
-rm -rf /tmp/downloads ${GNUPGHOME}
+rm -rf /tmp/downloads
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
