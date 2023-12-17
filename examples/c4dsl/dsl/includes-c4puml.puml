@@ -1,0 +1,13 @@
+@startuml
+
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+!define DEVICONS2 https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons2
+!define MATERIAL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/material
+
+!includeurl FONTAWESOME/user.puml
+!includeurl DEVICONS2/vscode.puml
+!includeurl MATERIAL/language.puml
+
+skinparam dpi 300
+
+@enduml

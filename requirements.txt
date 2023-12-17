@@ -3,5 +3,6 @@ mkdocs-material
 mkdocs-glightbox
 mkdocs-awesome-pages-plugin
 mkdocs-linkcheck
+mkdocs-macros-plugin
 neoteroi-mkdocs
 mdx_truly_sane_lists

@@ -1,0 +1,14 @@
+- title: Make some examples
+  icon: ':material-alpha:'
+  sub_title: 2023-Q4
+  content: Gathered from various tech shores
+
+- title: Share with collaborators
+  sub_title: 2024-Q1
+  icon: ':material-beta:'
+  content: Curated into a git repository
+
+- title: Publish
+  icon: ':material-gamma:'
+  sub_title: 2024-Q2
+  content: Content published using github pages

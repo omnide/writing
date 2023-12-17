@@ -1,4 +1,6 @@
-# System catalog example
+# C4 DSL
+
+## System catalog example
 
 - [catalog.dsl](dsl/catalog.dsl): a catalog of people and software systems (this excludes any
   relationships)

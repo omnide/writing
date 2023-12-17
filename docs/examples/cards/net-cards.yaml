@@ -1,0 +1,19 @@
+- title: NATS
+  content: |
+    NATS is a simple, secure and high performance open source messaging system for cloud native 
+    applications, IoT messaging, and microservices architectures.
+  image: ./images/NATS.svg
+  url: https://docs.nats.io/  
+
+- title: DNS
+  content: |
+    DNS is a hierarchical and decentralized naming system for computers, services, or other
+    resources connected to the Internet or a private network.
+  image: ./images/DNS.svg
+  url: https://en.wikipedia.org/wiki/Domain_Name_System
+
+- title: Grafana
+  content: |
+    Grafana is a multi-platform open source analytics and interactive visualization web application.
+  image: ./images/Grafana.svg
+  url: https://grafana.com/docs/grafana/latest/

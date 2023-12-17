@@ -3,8 +3,8 @@ repo_url: https://github.com/omnidevelop/writing
 repo_name: omnidevelop/writing
 edit_uri: blob/main/docs/
 extra_css:
+  - assets/stylesheets/pallette.css
   - assets/stylesheets/glightbox.min.css
-  - assets/stylesheets/pallet.css
   - assets/stylesheets/neoteroi-mkdocs.css
 extra_javascript:
   - assets/javascripts/glightbox.min.js
@@ -38,13 +38,16 @@ theme:
         name: Light mode
 plugins: 
   - search
-  - glightbox
   - awesome-pages
+  - glightbox
+  - macros
 markdown_extensions: 
   - attr_list
   - admonition
   - md_in_html
   - mdx_truly_sane_lists
+  - neoteroi.cards
+  - neoteroi.projects
   - neoteroi.timeline
   - pymdownx.arithmatex
   - pymdownx.emoji:

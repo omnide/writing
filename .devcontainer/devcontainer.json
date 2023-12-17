@@ -2,7 +2,7 @@
     "build": {
         "dockerfile": "Dockerfile",
         "args": {
-            "VARIANT": "buster"
+            "VARIANT": "bullseye"
         }
     },
     "containerEnv": {
@@ -101,6 +101,8 @@
                 "stkb.rewrap",
                 "streetsidesoftware.code-spell-checker",
                 "tamasfe.even-better-toml",
+                "timkmecl.chatgpt",
+                "timonwong.shellcheck",
                 "vscjava.vscode-gradle"
             ]
         }
